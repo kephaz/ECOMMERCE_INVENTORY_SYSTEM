@@ -1,6 +1,10 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Livewire\CartPage;
+use App\Livewire\HomePage;
+use App\Livewire\CategoriesPage;
+use App\Livewire\ProductsPage;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +18,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get ('/', HomePage::class);
+Route::get('/categories', CategoriesPage::class);
+Route::get('/products', ProductsPage::class);
+Route::get('/cart', CartPage::class);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
