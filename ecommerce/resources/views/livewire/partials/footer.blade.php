@@ -19,7 +19,7 @@
         <!-- End Col -->
   
         <div class="col-span-1">
-          <h4 class="font-semibold text-gray-100">Prodigy Info Tech</h4>
+          <h4 class="font-semibold text-gray-100">Asaaju Olalekan</h4>
   
           <div class="mt-3 grid space-y-3">
             <p><a class="inline-flex gap-x-2 text-gray-400 hover:text-gray-200" href="#">About us</a></p>
