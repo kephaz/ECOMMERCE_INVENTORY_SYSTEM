@@ -1,4 +1,5 @@
-<div class="w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+<div>
+  <div class="w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
     <div class="flex h-full items-center">
       <main class="w-full max-w-md mx-auto p-6">
         <div class="mt-7 bg-white border border-gray-200 rounded-xl shadow-sm">
@@ -7,7 +8,7 @@
               <h1 class="block text-2xl font-bold text-gray-800">Forgot password?</h1>
               <p class="mt-2 text-sm text-gray-600">
                 Remember your password?
-                <a class="text-blue-600 decoration-2 hover:underline font-medium" href="/login">
+                <a class="text-blue-600 decoration-2 hover:underline font-medium" href="/login-user">
                   Sign in here
                 </a>
               </p>
@@ -41,3 +42,4 @@
       </main>
     </div>
   </div>
+</div>

@@ -5,6 +5,8 @@ use App\Livewire\Auth\ForgotPasswordPage;
 use App\Livewire\Auth\LoginPage;
 use App\Livewire\Auth\RegisterPage;
 use App\Livewire\Auth\ResetPasswordPage;
+use App\Livewire\CancelPage;
+use App\Livewire\SuccessPage;
 use App\Livewire\CartPage;
 use App\Livewire\HomePage;
 use App\Livewire\CategoriesPage;
@@ -38,7 +40,9 @@ Route::get('/my-orders/{order}', MyOrderDetailPage::class);
 Route::get('/login-user', LoginPage::class);
 Route::get('/register-user', RegisterPage::class);
 Route::get('/reset-user', ResetPasswordPage::class);
-Route::get('/forget-user', ForgotPasswordPage::class);
+Route::get('/forgot', ForgotPasswordPage::class);
+Route::get('/success', SuccessPage::class);
+Route::get('/cancel', CancelPage::class);
 
 
 Route::get('/dashboard', function () {
