@@ -167,9 +167,9 @@
         <div class="justify-center max-w-6xl px-4 py-4 mx-auto lg:py-0">
           <div class="grid grid-cols-1 gap-6 lg:grid-cols-4 md:grid-cols-2">
             @foreach ($brands as $brand )
-            <div class="bg-white rounded-lg shadow-md" wire-key="{{$brand->id}}">
+            <div class="bg-white rounded-lg shadow-md dark:bg-gray-800" wire:key="{{$brand->id}}">
               <a href="" class="">
-                <img src="{{url('storage', $brand->image)}}" alt="brand->name" class="object-cover w-full h-64 rounded-t-lg">
+                <img src="{{url('storage', $brand->image)}}" alt="{{$brand->name}}" class="object-cover w-full h-64 rounded-t-lg">
               </a>
               <div class="p-5 text-center">
                 <a href="" class="text-2xl font-bold tracking-tight text-gray-900">
@@ -177,20 +177,19 @@
                 </a>
               </div>
             </div>
-      
             @endforeach
             
             {{-- <div class="bg-white rounded-lg shadow-md">
               <a href="" class="">
-                <img src="https://i.pinimg.com/originals/1d/35/83/1d35833251dec0ad373ad7cbbbf4f3e2.png" alt="" class="object-cover w-full h-64 rounded-t-lg">
+                <img src="https://i.pinimg.com/originals/1d/35/83/1d35833251dec0ad373ad7cbbbf4f3e2.png" alt="Phone image" class="object-cover w-full h-64 rounded-t-lg">
               </a>
               <div class="p-5 text-center">
                 <a href="" class="text-2xl font-bold tracking-tight text-gray-900">
                   Samsung
                 </a>
               </div>
-            </div>
-       --}}
+            </div> --}}
+      
             {{-- <div class="bg-white rounded-lg shadow-md">
               <a href="" class="">
                 <img src="https://salesindia.com/media/codazon_cache/brand/400x400/wysiwyg/codazon/main-content-22/Brand_logo/ONEPLUS_LOGO_.png" alt="" class="object-cover w-full h-64 rounded-t-lg">
@@ -244,15 +243,16 @@
       
         <div class="max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto">
           <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6">
-      
-            {{-- <a class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition" href="#">
+            @foreach ($categories as $category)
+            <a class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition" 
+            href="#" wire:key="{{$category->id}}">
               <div class="p-4 md:p-5">
                 <div class="flex justify-between items-center">
                   <div class="flex items-center">
-                    <img class="h-[2.375rem] w-[2.375rem] rounded-full" src="https://cdn.bajajelectronics.com/product/b002c02c-c379-49f8-b2a6-bd2e56d0e23a" alt="Image Description">
+                    <img class="h-[2.375rem] w-[2.375rem] rounded-full" src="{{url('storage', $category->image)}}" alt="{{$category->name}}">
                     <div class="ms-3">
                       <h3 class="group-hover:text-blue-600 font-semibold text-gray-800">
-                        Laptops
+                        {{$category->name}}
                       </h3>
                     </div>
                   </div>
@@ -263,7 +263,9 @@
                   </div>
                 </div>
               </div>
-            </a> --}}
+            </a>
+            @endforeach
+           
 {{--       
             <a class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition" href="#">
               <div class="p-4 md:p-5">
