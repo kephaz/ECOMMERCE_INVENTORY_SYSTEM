@@ -33,7 +33,6 @@
                       </label>
                     </li>
                   </ul>
-      
                 </div>
                 <div class="p-4 mb-5 bg-white border border-gray-200">
                   <h2 class="text-2xl font-bold">Brand</h2>
@@ -83,7 +82,6 @@
                     </li>
                   </ul>
                 </div>
-      
                 <div class="p-4 mb-5 bg-white border border-gray-200">
                   <h2 class="text-2xl font-bold">Price</h2>
                   <div class="w-16 pb-2 mb-6 border-b border-rose-600"></div>
@@ -112,7 +110,7 @@
                   <div class="w-full px-3 mb-6 sm:w-1/2 md:w-1/3">
                     <div class="border border-gray-300">
                       <div class="relative bg-gray-200">
-                        <a href="/products/product_one" class="">
+                        <a href="/products/{{ $product->slug }}" class="">
                           <img src="{{url('storage', $product->images)}}" alt="{{$product->name}}" class="object-cover w-full h-56 mx-auto ">
                         </a>
                       </div>
