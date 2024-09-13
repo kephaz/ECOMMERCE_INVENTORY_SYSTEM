@@ -1,8 +1,7 @@
 <?php
 
 namespace App\Livewire;
-
-use App\Models\product;
+use App\Models\Product;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 use Livewire\WithPagination;

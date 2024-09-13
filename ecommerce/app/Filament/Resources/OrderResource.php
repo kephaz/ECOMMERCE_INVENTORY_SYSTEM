@@ -6,7 +6,7 @@ use App\Filament\Resources\OrderResource\Pages;
 use App\Filament\Resources\OrderResource\RelationManagers;
 use App\Filament\Resources\OrderResourcesResource\RelationManagers\AddressRelationManager;
 use App\Models\Order;
-use App\Models\product;
+use App\Models\Product;
 use Faker\Core\Number;
 use Filament\Actions\ActionGroup;
 use Filament\Actions\DeleteAction;
