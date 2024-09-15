@@ -29,9 +29,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get ('/', HomePage::class);
-Route::get('/categories', CategoriesPage::class);
-Route::get('/products', ProductsPage::class);
+// Route::get ('/', HomePage::class);
+Route::get('/', function (){
+    return view( 'index');
+});
+Route::get('/categories', function (){
+    return view( 'categories');
+});
+Route::get('/products', function (){
+    return view( 'products');
+});
+// Route::get('/categories', CategoriesPage::class);
+// Route::get('/products', ProductsPage::class);
 Route::get('/cart', CartPage::class);
 Route::get('/products/{product}', ProductDetailPage::class);
 Route::get('/checkout', CheckoutPage::class);
@@ -43,6 +52,9 @@ Route::get('/reset-user', ResetPasswordPage::class);
 Route::get('/forgot', ForgotPasswordPage::class);
 Route::get('/success', SuccessPage::class);
 Route::get('/cancel', CancelPage::class);
+
+
+
 
 
 Route::get('/dashboard', function () {
